@@ -1,0 +1,59 @@
+body {
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Texto central "TE AMO" con brillo */
+.te-amo {
+    font-size: 80px;
+    font-weight: bold;
+    color: #ff0066;
+    text-shadow: 
+        0 0 10px #ff0066, 
+        0 0 20px #ff3399, 
+        0 0 30px #ff6699, 
+        0 0 40px #ff99cc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 2s infinite alternate;
+}
+
+/* Animación de brillo */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff0066, 0 0 20px #ff3399; }
+    100% { text-shadow: 0 0 20px #ff3399, 0 0 30px #ff66cc, 0 0 40px #ff99cc; }
+}
+
+/* Corazones flotantes */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: #ff3399;
+    text-shadow: 0 0 10px #ff3399, 0 0 20px #ff66cc;
+    animation: float 5s infinite ease-in-out;
+}
+
+/* Lienzo de fuegos artificiales */
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
